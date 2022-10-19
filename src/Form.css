@@ -79,3 +79,11 @@ select {
     background: rgba(19, 159, 184, 0.959);
     color: white;
 }
+
+
+@media(max-width:900px){
+    .form-container{
+        position:relative;
+        height: 40%;
+    }
+}
