@@ -1,0 +1,40 @@
+.todo-container {
+    text-align: center;
+    background: rgba(255,255,255,0.45);
+    width: 70%;
+    margin-top: 12px;
+    padding: 7px;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 10px 5px 5px grey;
+}
+
+.todo-container p {
+    margin-bottom: 15px;
+}
+
+.btn-complete {
+    height: 16px;
+    background: white;
+    color: blue;
+    border:transparent;
+    cursor: pointer;
+    font-size: 16px;
+   
+}
+
+.btn-trash {
+    margin-left: 40px;
+    font-size: 16px;
+    border: none;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+/* .todo-container button {
+    background: red;
+} */
+
