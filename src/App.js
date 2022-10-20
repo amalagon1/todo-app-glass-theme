@@ -51,6 +51,7 @@ function App() {
   }
   return (
     <div className="wrapper">
+      <h1 className="title">My Todo List</h1>
       <Dashboard todos={todos}
         setTodos={setTodos}
         inputText={inputText}
