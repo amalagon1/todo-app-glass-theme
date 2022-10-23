@@ -5,12 +5,12 @@ import Dashboard from './components/Dashboard';
 import Circle from './components/Circle';
 
 function App() {
-  //USE EFFECT
+
 
   const [inputText, setInputText] = useState('');
   const [todos, setTodos] = useState([]);
   const [status, setStatus] = useState("all");
-  const [filteredTodos, setFilteredTodos] = useState([])
+  const [filteredTodos, setFilteredTodos] = useState([]);
 
 
   useEffect(() => {
@@ -21,7 +21,6 @@ function App() {
     filtereHandler();
     saveLocalTodos();
   }, [todos, status]);
-
 
   const filtereHandler = () => {
     switch (status) {
@@ -36,17 +35,16 @@ function App() {
         break;
     }
   }
-
-  //save to localstorage//
   const saveLocalTodos = () => {
     localStorage.setItem('todos', JSON.stringify(todos));
   };
+
+
   const getLocalTodos = () => {
-    if (localStorage.getItem('todos') === null) {
-      localStorage.setItem('todos', JSON.stringify([]));
-    } else {
-      let todoLocal = JSON.parse(localStorage.getItem('todos'))
-      setTodos(todoLocal);
+    let list = JSON.parse(localStorage.getItem('todos'));
+    if (list) {
+      setTodos(list);
+      console.log(list);
     }
   }
   return (
