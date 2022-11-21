@@ -28,6 +28,10 @@ const Form = ({ todos, setTodos, inputText, setInputText, setStatus }) => {
     const statusHandler = (e) => {
         setStatus(e.target.value);
     }
+
+    const deleteAllHandler = () => {
+        setTodos([])
+    }
     return (
         <div className="form-container">
             <h2>Add a task</h2>
@@ -53,7 +57,7 @@ const Form = ({ todos, setTodos, inputText, setInputText, setStatus }) => {
                         <option value="uncompleted">Uncompleted</option>
                     </select>
                 </div>
-                <button className="delete-btn">Delete All Tasks</button>
+                <button className="delete-btn" onClick={deleteAllHandler}>Delete All Tasks</button>
             </form>
 
         </div>
